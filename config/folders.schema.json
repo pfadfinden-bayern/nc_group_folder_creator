@@ -1,0 +1,54 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "$id": "nc_group_folder_creator_folder_schema",
+    "title": "nc_group_folder_creator folder schema",
+    "description": "definitions for folders to be created",
+    "type": "object",
+    "properties": {
+        "folders": {
+            "$ref": "#/definitions/folders"
+        }
+    },
+    "definitions": {
+        "folder": {
+            "type": "object",
+            "properties": {
+                "name":{
+                    "type": "string"
+                },
+                "groups": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "quota": {
+                    "type": "string"
+                },
+                "folders": {
+                    "$ref": "#/definitions/folders"
+                }
+            },
+            "required":[
+                "name"
+            ],
+            "additionalItems": false
+        },
+        "folders": {
+            "description": "folders/subfolders",
+            "oneOf": [
+                {
+                    "$ref": "#/definitions/folder"
+                },
+                {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/folder"
+                    }
+                }
+            ],
+            "additionalItems": false,
+            "uniqueItems": true
+        }
+    }
+}
