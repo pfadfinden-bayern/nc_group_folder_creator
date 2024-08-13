@@ -1,0 +1,7 @@
+[target]
+url = 'your_url'
+
+[script]
+cookie_file = 'config/cookies.json'
+folder_file = 'config/folders.json'
+driver = 'firefox' # options: chrome, edge, firefox, safari

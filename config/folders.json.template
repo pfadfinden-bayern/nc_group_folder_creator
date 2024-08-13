@@ -1,0 +1,29 @@
+{
+    "$schema": "./folders.schema.json",
+    "folders": [
+        {
+            "name": "folder 1",
+            "groups": [
+                "group1",
+                "group2"
+            ],
+            "quota": "10GB",
+            "folders": [
+                {"name": "subfolder 1"},
+                {"name": "subfolder 2"}
+            ]
+        },
+        {
+            "name": "folder 2",
+            "groups": [
+                "group1",
+                "group2",
+                "group3"
+            ],
+            "quota": "50GB",
+            "folders": [
+                {"name": "subfolder 1"}
+            ]
+        }
+    ]
+}
