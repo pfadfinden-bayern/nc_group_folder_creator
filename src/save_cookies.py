@@ -1,5 +1,4 @@
 import json
-from selenium.webdriver.common.by import By
 from selenium import webdriver
 import tomli
 from dotmap import DotMap
